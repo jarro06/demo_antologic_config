@@ -1,0 +1,797 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": true,
+    "canStar": true,
+    "slug": "adp-toolchain-detailed-status",
+    "url": "/d/fKsJAXCiz/adp-toolchain-detailed-status",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2019-04-17T08:30:51Z",
+    "updated": "2019-04-17T08:46:57Z",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 6,
+    "hasAcl": false,
+    "isFolder": false,
+    "folderId": 0,
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": null,
+    "iteration": 1555490659641,
+    "links": [],
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 10,
+        "panels": [],
+        "title": "Current Status",
+        "type": "row"
+      },
+      {
+        "content": "# ADP Toolchain - Detailed Status\n\nShowing most important node-exporter metrics.",
+        "description": "Dashboard for monitoring  the toolstack",
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 0,
+          "y": 1
+        },
+        "id": 20,
+        "links": [],
+        "mode": "markdown",
+        "targets": [
+          {
+            "aggregation": "Last",
+            "decimals": 2,
+            "displayAliasType": "Warning / Critical",
+            "displayType": "Regular",
+            "displayValueWithAlias": "Never",
+            "expr": "",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "refId": "A",
+            "units": "none",
+            "valueHandler": "Number Threshold"
+          }
+        ],
+        "title": "",
+        "type": "text"
+      },
+      {
+        "bgColor": "rgb(255, 255, 255)",
+        "clockType": "24 hour",
+        "countdownSettings": {
+          "customFormat": null,
+          "endCountdownTime": "2019-03-14T07:09:00.000Z",
+          "endText": "00:00:00"
+        },
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "showDate": false
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 5,
+          "x": 5,
+          "y": 1
+        },
+        "id": 18,
+        "links": [],
+        "mode": "time",
+        "offsetFromUtc": null,
+        "offsetFromUtcMinutes": null,
+        "refreshSettings": {
+          "syncWithDashboard": false
+        },
+        "targets": [
+          {
+            "expr": "",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "refId": "A"
+          }
+        ],
+        "timeSettings": {
+          "customFormat": "HH:mm:ss",
+          "fontSize": "30px",
+          "fontWeight": "normal"
+        },
+        "title": "Current Time",
+        "type": "grafana-clock-panel"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#d44a3a",
+          "#d44a3a",
+          "#56A64B"
+        ],
+        "datasource": "prometheus",
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 10,
+          "x": 10,
+          "y": 1
+        },
+        "id": 12,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "100%",
+        "prefix": "",
+        "prefixFontSize": "80%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false
+        },
+        "tableColumn": "__name__",
+        "targets": [
+          {
+            "expr": "up{job=\"$job\"}",
+            "format": "time_series",
+            "instant": false,
+            "intervalFactor": 1,
+            "refId": "A"
+          }
+        ],
+        "thresholds": "0,1",
+        "title": "$job",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "UP",
+            "value": "1"
+          },
+          {
+            "op": "=",
+            "text": "DOWN",
+            "value": "0"
+          },
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": false,
+        "colors": [
+          "#d44a3a",
+          "rgba(237, 129, 40, 0.89)",
+          "#299c46"
+        ],
+        "datasource": "prometheus",
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 4,
+          "x": 20,
+          "y": 1
+        },
+        "id": 14,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "count(node_cpu_seconds_total{mode=\"system\" ,job=\"$job\"})",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "refId": "A"
+          }
+        ],
+        "thresholds": "",
+        "title": "Host CPU Cores",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 7
+        },
+        "id": 8,
+        "panels": [],
+        "repeat": null,
+        "title": "Utilization (%)",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": "prometheus",
+        "format": "percent",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 0,
+          "y": 8
+        },
+        "id": 2,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "#629e51",
+          "show": true
+        },
+        "tableColumn": "instance",
+        "targets": [
+          {
+            "expr": "((node_memory_MemTotal_bytes{job=\"$job\"}) - (node_memory_MemAvailable_bytes{job=\"$job\"}))/ (node_memory_MemTotal_bytes{job=\"$job\"}) * 100 ",
+            "format": "time_series",
+            "instant": false,
+            "interval": "",
+            "intervalFactor": 1,
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "80, 85",
+        "title": "Host Memory (%)",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": "prometheus",
+        "format": "percent",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 8,
+          "y": 8
+        },
+        "id": 4,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "#629e51",
+          "show": true
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "((sum(node_cpu_seconds_total{mode=~\"user|nice|system|irq|softirq|steal|idle|iowait\" ,job=\"$job\"}) by (instance, job)) - ( sum(node_cpu_seconds_total{mode=~\"idle|iowait\" ,job=\"$job\"}) by (instance,job) )   )   /  (sum(node_cpu_seconds_total{mode=~\"user|nice|system|irq|softirq|steal|idle|iowait\" ,job=\"$job\"}) by (instance, job)) * 100",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "refId": "A"
+          }
+        ],
+        "thresholds": "80, 85",
+        "title": "Host CPU (%)",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "cacheTimeout": null,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "prometheus",
+        "fill": 1,
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 16,
+          "y": 8
+        },
+        "id": 6,
+        "legend": {
+          "avg": false,
+          "current": false,
+          "max": false,
+          "min": false,
+          "show": true,
+          "total": false,
+          "values": false
+        },
+        "lines": true,
+        "linewidth": 1,
+        "links": [],
+        "nullPointMode": "null",
+        "percentage": false,
+        "pointradius": 2,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "100 *(1 - (node_filesystem_free_bytes{job=\"$job\", mountpoint=\"/\", device=\"rootfs\"}  /node_filesystem_size_bytes{job=\"$job\",  mountpoint=\"/\", device=\"rootfs\"}) )",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "root filesystem",
+            "refId": "A"
+          },
+          {
+            "expr": "100 *(1 - (node_filesystem_free_bytes{job=\"$job\", mountpoint=\"/prometheus\"}  /node_filesystem_size_bytes{job=\"$job\",  mountpoint=\"/prometheus\"}) )",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "prometheus-pvc",
+            "refId": "B"
+          },
+          {
+            "expr": "100 *(1 - (node_filesystem_free_bytes{job=\"$job\", mountpoint=\"/nexus-data\"}  /node_filesystem_size_bytes{job=\"$job\",  mountpoint=\"/nexus-data\"}) )",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "nexus-pvc",
+            "refId": "C"
+          },
+          {
+            "expr": "100 *(1 - (node_filesystem_free_bytes{job=\"$job\", mountpoint=\"/var/lib/jenkins/jobs\"}  /node_filesystem_size_bytes{job=\"$job\",  mountpoint=\"/var/lib/jenkins/jobs\"}) )",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "jenkins-persistent-pvc",
+            "refId": "D"
+          },
+          {
+            "expr": "100 *(1 - (node_filesystem_free_bytes{job=\"$job\", mountpoint=\"/var/lib/pgsql/data\"}  /node_filesystem_size_bytes{job=\"$job\",  mountpoint=\"/var/lib/pgsql/data\"}) )",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "sonarqube-persistent-pvc",
+            "refId": "E"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Pod Disk (%)",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 13
+        },
+        "id": 22,
+        "panels": [],
+        "title": "Traffic",
+        "type": "row"
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "prometheus",
+        "fill": 1,
+        "gridPos": {
+          "h": 8,
+          "w": 24,
+          "x": 0,
+          "y": 14
+        },
+        "id": 16,
+        "legend": {
+          "avg": false,
+          "current": false,
+          "max": false,
+          "min": false,
+          "show": true,
+          "total": false,
+          "values": false
+        },
+        "lines": true,
+        "linewidth": 2,
+        "links": [],
+        "maxPerRow": 6,
+        "nullPointMode": "connected",
+        "percentage": false,
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "repeat": "instance",
+        "repeatDirection": "h",
+        "seriesOverrides": [
+          {
+            "alias": "/.*_in/",
+            "transform": "negative-Y"
+          }
+        ],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "irate(node_network_receive_bytes_total{device=\"eth0\", job=\"$job\"}[5m])*8",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "{{device}}_in",
+            "refId": "A"
+          },
+          {
+            "expr": "irate(node_network_transmit_bytes_total{device=\"eth0\", job=\"$job\"}[5m])*8",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "legendFormat": "{{device}}_out",
+            "refId": "B"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Network Traffic",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "bits",
+            "label": "bits in (-) / bits out (+)",
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 18,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": "nexus-node-exporter",
+            "value": "nexus-node-exporter"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "label": "job",
+          "multi": false,
+          "name": "job",
+          "options": [
+            {
+              "selected": true,
+              "text": "alertmanager-node-exporter",
+              "value": "alertmanager-node-exporter"
+            },
+            {
+              "selected": false,
+              "text": "grafana-node-exporter",
+              "value": "grafana-node-exporter"
+            },
+            {
+              "selected": false,
+              "text": "prometheus-node-exporter",
+              "value": "prometheus-node-exporter"
+            },
+            {
+              "selected": false,
+              "text": "jenkins-node-exporter",
+              "value": "jenkins-node-exporter"
+            },
+            {
+              "selected": false,
+              "text": "nexus-node-exporter",
+              "value": "nexus-node-exporter"
+            },
+            {
+              "selected": false,
+              "text": "sonarqube-node-exporter",
+              "value": "sonarqube-node-exporter"
+            }
+          ],
+          "query": "alertmanager-node-exporter, grafana-node-exporter ,prometheus-node-exporter, jenkins-node-exporter,  nexus-node-exporter, sonarqube-node-exporter",
+          "skipUrlSync": false,
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ]
+    },
+    "timezone": "",
+    "title": "ADP Toolchain - Detailed Status",
+    "uid": "fKsJAXCiz",
+    "version": 6
+  }
+}

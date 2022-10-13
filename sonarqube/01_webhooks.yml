@@ -1,0 +1,4 @@
+#- kind: webhook
+#  items:
+#    name: <add descriptive name here>  # mandatory
+#    url:  <add URL here>               # mandatory

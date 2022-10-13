@@ -1,0 +1,5 @@
+#- kind: project                           # mandatory
+#  name: '<add descriptive project name>'  # mandatory
+#  key: '<add unique project key>'         # mandatory
+#  qualitygate: 'ADP Toolchain Default'    # optionally preselect a Quality Gate
+                                           # Important: Use only if the preselected Quality Gate has been defined in 01_quality_profiles.yml !

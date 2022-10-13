@@ -1,0 +1,12 @@
+---
+- kind: blobstore
+  action: create
+  name: maven
+
+- kind: blobstore
+  action: create
+  name: raw
+
+- kind: blobstore
+  action: create
+  name: npm

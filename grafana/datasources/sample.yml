@@ -1,0 +1,8 @@
+#datasources:
+#- name: 'name of your data source'
+#  type: 'Give the desired datasource which you would like to configure eg: prometheus'
+#  access: 'browser'
+#  org_id: 1
+#  url: 'url of your configured datasource'
+#  version: 1
+#  editable: true

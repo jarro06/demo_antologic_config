@@ -1,0 +1,24 @@
+#
+# Add your jenkins plugin here
+# plugin-name-id:version
+# as listed here https://plugins.jenkins.io/
+#
+# Note: These plugins will be installed additionally to a list of plugin files.
+# Preinstalled plugins depend on the cloud your service is installed in:
+#
+# Basic plugins for all DevOps Services:
+# https://github.developer.allianz.io/CRP/docker-jenkins/blob/master/master-base/contrib/configuration/basic-plugins.txt
+#
+# OpenShift specific plugins:
+# https://github.developer.allianz.io/CRP/docker-jenkins/blob/master/master-openshift/contrib/configuration/basic-plugins.txt
+#
+# Kubernetes specific plugins (Azure and AWS based DevOps Services):
+# https://github.developer.allianz.io/CRP/docker-jenkins/blob/master/master-k8s/contrib/configuration/base/basic-plugins.txt
+#
+#   AWS EKS specific plugins
+#   https://github.developer.allianz.io/CRP/docker-jenkins/blob/master/master-k8s/contrib/configuration/eks/eks-plugins.txt
+#
+#   Azure AKS specific plugins
+#   https://github.developer.allianz.io/CRP/docker-jenkins/blob/master/master-k8s/contrib/configuration/aks/aks-plugins.txt
+#
+ansicolor:0.6.2

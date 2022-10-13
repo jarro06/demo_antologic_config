@@ -1,0 +1,6 @@
+# Configuration of Nexus3 plugins
+# For a list of available plugins, cf. https://nexus-cluster-adp-toolchain.apps.tools.adp.allianz/repository/nexus-plugins/.
+#
+# Caution: No version compatibility check during installation!
+#
+# nexus-repository-p2:0.0.2 # example

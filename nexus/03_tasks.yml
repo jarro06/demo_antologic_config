@@ -1,0 +1,48 @@
+---
+- kind: system
+  action: addTask
+  name: "Toolchain - remove unused snapshots"
+  typeId: "repository.maven.purge-unused-snapshots"
+  taskProperties:
+    lastUsed: "5"
+    repositoryName: "*"
+  weekly:
+    startAt: "2018-01-01 00:00"
+    weekdays:
+      - "SAT"
+
+- kind: system
+  action: addTask
+  name: "Toolchain - remove unused components"
+  typeId: "repository.purge-unused"
+  taskProperties:
+    lastUsed: "5"
+    repositoryName: "*"
+  weekly:
+    startAt: "2018-01-01 00:30"
+    weekdays:
+      - "SAT"
+
+- kind: system
+  action: addTask
+  name: "Toolchain - compact blobstore: maven"
+  typeId: "blobstore.compact"
+  taskProperties:
+    blobstoreName: "maven"
+  daily: "2018-01-01 01:20"
+
+- kind: system
+  action: addTask
+  name: "Toolchain - compact blobstore: npm"
+  typeId: "blobstore.compact"
+  taskProperties:
+    blobstoreName: "npm"
+  daily: "2018-01-01 01:10"
+
+- kind: system
+  action: addTask
+  name: "Toolchain - compact blobstore: raw"
+  typeId: "blobstore.compact"
+  taskProperties:
+    blobstoreName: "raw"
+  daily: "2018-01-01 01:00"

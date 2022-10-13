@@ -1,0 +1,37 @@
+base:
+  use_as_default: true
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-base
+maven:
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-maven
+nodejs:
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-nodejs
+nodejs-with-browsers:
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-nodejs-with-browsers
+python:
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-python
+deployment-tools:
+  containers:
+    jnlp:
+      cpu_request: 500m
+      memory_request: 1Gi
+      image: adp-jenkins-agent-deployment-tools

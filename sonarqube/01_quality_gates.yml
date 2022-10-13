@@ -1,0 +1,16 @@
+#- kind: quality_gate         # mandatory
+#  name: 'Example Test Gate'  # mandatory
+#  conditions:                # mandatory
+#    blocker_violations:
+#      error: 10
+#      op: GT
+#    critical_violations:
+#      error: 10
+#      op: GT
+#    major_violations:
+#      error: 10
+#      op: GT
+#    test_failures:
+#      error: 10
+#      op: GT
+#  default: False

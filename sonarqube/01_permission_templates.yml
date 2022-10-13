@@ -1,0 +1,11 @@
+#- kind: permission_template                                # mandatory
+#  name: "ADP Toolchain Default"                            # mandatory
+#  id: 'adp-toolchain-default'                              # mandatory
+#  default: true                                            # optional
+#  description: "Comprehensive list of global permissions"  # mandatory
+#  permissions:                                             # this is a complete list of available permissions
+#  - 'admin'
+#  - 'codeviewer'
+#  - 'user'
+#  - 'scan'
+#  - 'issueadmin'

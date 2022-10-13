@@ -1,0 +1,8 @@
+#- kind: user                  # mandatory
+#  login: <add unique login>   # mandatory
+#  name: <add username>        # mandatory
+#  global_groups:              # optional; all new users will be added do sonar-users by default
+#  - '<add unique group name>' # Important:  Make sure that all groups are defined properly in 01_groups.yml
+#  - '<add unique group name>' # optional
+#  global_permissions:         # optional
+#  - 'provisioning'

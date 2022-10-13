@@ -1,0 +1,11 @@
+# Add the plugins here
+# See list of plugins https://nexus-cluster-adp-toolchain.apps.tools.adp.allianz/#browse/browse:sonarqube-plugins
+#
+# Structure:
+# identity:version
+# or: identity:url
+#
+# NOTE These plugins will be install additionally to
+#   https://github.developer.allianz.io/CRP/docker-sonarqube/blob/master/contrib/configuration/plugins.txt
+#
+# name:version

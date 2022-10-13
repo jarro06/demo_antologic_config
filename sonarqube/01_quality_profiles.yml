@@ -1,0 +1,14 @@
+#- kind: quality_profile            # mandatory
+#  name: 'Example Quality Profile'  # mandatory
+#  language: xml                    # mandatory
+#  parent: Sonar way                # optional
+#  default: true                    # optional
+#  activated_rules:                 # mandatory
+#    - key: xml:IllegalTabCheck
+#    - key: xml:IndentCheck
+#      parameters:
+#        indentSize: 4
+#        tabSize: 4
+#    - key: xml:NewlineCheck
+#    - key: xml:S1778
+#    - key: xml:S2260

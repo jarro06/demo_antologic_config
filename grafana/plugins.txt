@@ -1,0 +1,11 @@
+# Add the plugins here
+# See list of plugins https://nexus-cluster-adp-toolchain.apps.tools.adp.allianz/#browse/browse:grafana-plugins
+# or https://grafana.com/plugins
+#
+# Structure:
+# identity:version
+# or: identity:url
+#
+# Example plugins:
+#grafana-clock-panel:1.0.2
+#grafana-piechart-panel:1.3.6

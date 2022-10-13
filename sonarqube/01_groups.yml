@@ -1,0 +1,11 @@
+# The user groups defined  within this file will be created.
+# The administrator group 'sonarqube-administrators' is available by default and may *not* be redefined here!
+#- kind: group                                   # mandatory
+#  name: '<add unique group name>'               # mandatory
+#  description: '<add descriptive name here>'    # optional
+#  global_permissions:                           # optional
+#  - 'admin'                                     # this is a complete list of global permissions
+#  - 'profileadmin'
+#  - 'gateadmin'
+#  - 'scan'
+#  - 'provisioning'

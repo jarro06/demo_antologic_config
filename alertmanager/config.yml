@@ -1,0 +1,10 @@
+route:
+    receiver: email-me
+receivers:
+- name: email-me
+#  email_configs:
+#  - smarthost: 'tmu-econ.mail.allianz:25'
+#    from: 'adp@allianz.com'
+#    to: firstname.lastname@allianz.de
+#    require_tls: false
+#    send_resolved: true
